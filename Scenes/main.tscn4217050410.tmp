@@ -1171,7 +1171,7 @@ terrain_set_0/terrain_3/color = Color(0.375, 0.5, 0.25, 1)
 terrain_set_0/terrain_4/name = "Rug"
 terrain_set_0/terrain_4/color = Color(0.666667, 0.333333, 0, 1)
 navigation_layer_0/layers = 1
-custom_data_layer_0/name = "walkable"
+custom_data_layer_0/name = "Walkable"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_dogae")
 pattern_0 = SubResource("TileMapPattern_ovm7s")
@@ -1179,7 +1179,7 @@ pattern_0 = SubResource("TileMapPattern_ovm7s")
 [node name="main" type="Node"]
 script = ExtResource("1_hptm8")
 key_scene = ExtResource("7_qpmsp")
-min_distance_from_player = 10.0
+min_distance_from_player = null
 
 [node name="TileMap" type="TileMap" parent="." groups=["tilemap"]]
 unique_name_in_owner = true

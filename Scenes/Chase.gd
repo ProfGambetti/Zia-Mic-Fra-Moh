@@ -13,7 +13,7 @@ var texture_chase = preload("res://Assets/zombie_walking.png")
 var texture_default = preload("res://Assets/zombie_standing.png")
 
 func enter(msg = {}) -> void:
-	if owner.is_queued_for_deletion():
+	if owner == null or owner.is_queued_for_deletion():
 		return 
 		
 	var random_stream_player = sounds.get_children().pick_random()
