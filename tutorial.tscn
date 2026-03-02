@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://t7ixf7dj1jck"]
+
+[ext_resource type="Script" uid="uid://svxnoho5cybd" path="res://tutorial.gd" id="1_7n6eb"]
+
+[node name="Tutorial_tscn" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_7n6eb")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="Background"]
+process_mode = 3
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/CenterContainer"]
+process_mode = 3
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Background/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL"
+horizontal_alignment = 1
+
+[node name="ObjectiveLabel" type="Label" parent="Background/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Obiettivo:
+Esplora la mappa, sconfiggi o evita gli zombie, raccogli la CHIAVE e usala per scappare dall'uscita!
+Attenzione:
+- Gli zombie ti inseguono e attaccano.
+- Raccogli AMMO (munizioni) per sparare, HEALTH (salute) per curarti.
+- Punta con il MOUSE per ruotare e mirare.
+- Se muori, game over!"
+horizontal_alignment = 1
+
+[node name="ControlsLabel" type="Label" parent="Background/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Comandi:
+W - Avanti (relativo alla direzione)
+S - Indietro
+A - Sinistra 
+D - Destra
+R - Ricarica arma
+LMB (tasto sinistro mouse) - Spara"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Background/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inizia"
+
+[connection signal="pressed" from="Background/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
