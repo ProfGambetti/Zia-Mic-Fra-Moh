@@ -1,7 +1,7 @@
 extends Area2D
 
 class_name Bullet
-var speed = 500
+var speed = 1000
 var move_direction: Vector2 = Vector2.ZERO
 var damage
 

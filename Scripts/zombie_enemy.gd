@@ -17,7 +17,7 @@ var health_pickup_scene = preload("res://Scenes/health_pickup.tscn")
 @export var rotation_speed: float = 2
 @export var wandering_speed = 150
 @export var navigation_target: Node2D
-@export var chasing_speed = 200
+@export var chasing_speed = 150
 
 @export_group("Scanning for player")
 @export var angle_cone_of_vision = 90
